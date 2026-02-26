@@ -1,6 +1,7 @@
 package handlers
 
 import (
+	"encoding/json"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
@@ -11,10 +12,12 @@ func PingHandler(c *gin.Context) {
 }
 
 func EchoHandler(c *gin.Context) {
-	var body map[string]interface{}
-	if err := c.ShouldBindJSON(&body); err != nil {
+	var raw json.RawMessage
+
+	if err := c.ShouldBindJSON(&raw); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": "invalid json"})
 		return
 	}
-	c.JSON(http.StatusOK, body)
+
+	c.Data(http.StatusOK, "application/json", raw)
 }
