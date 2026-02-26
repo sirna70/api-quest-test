@@ -3,8 +3,8 @@ package main
 import (
 	"os"
 
-	"api-quest-test/internal/routes"
 	"github.com/gin-gonic/gin"
+	"github.com/sirna70/api-quest-test/internal/routes"
 )
 
 func main() {

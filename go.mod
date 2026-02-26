@@ -1,4 +1,4 @@
-module api-quest-test
+module github.com/sirna70/api-quest-test
 
 go 1.23.5
 

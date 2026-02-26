@@ -4,9 +4,9 @@ import (
 	"net/http"
 	"strings"
 
-	"api-quest-test/internal/handlers"
 	"github.com/gin-gonic/gin"
 	"github.com/golang-jwt/jwt/v5"
+	"github.com/sirna70/api-quest-test/internal/handlers"
 )
 
 func AuthMiddleware() gin.HandlerFunc {

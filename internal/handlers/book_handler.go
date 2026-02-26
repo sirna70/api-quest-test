@@ -5,9 +5,9 @@ import (
 	"strconv"
 	"strings"
 
-	"api-quest-test/internal/models"
-	"api-quest-test/internal/storage"
 	"github.com/gin-gonic/gin"
+	"github.com/sirna70/api-quest-test/internal/models"
+	"github.com/sirna70/api-quest-test/internal/storage"
 )
 
 func CreateBook(c *gin.Context) {
