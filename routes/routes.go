@@ -2,8 +2,8 @@ package routes
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/sirna70/api-quest-test/internal/handlers"
-	"github.com/sirna70/api-quest-test/internal/middleware"
+	"github.com/sirna70/api-quest-test/handlers"
+	"github.com/sirna70/api-quest-test/middleware"
 )
 
 func SetupRoutes(r *gin.Engine) {

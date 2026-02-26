@@ -4,7 +4,7 @@ import (
 	"os"
 
 	"github.com/gin-gonic/gin"
-	"github.com/sirna70/api-quest-test/internal/routes"
+	"github.com/sirna70/api-quest-test/routes"
 )
 
 func main() {

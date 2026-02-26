@@ -3,7 +3,7 @@ package main
 import (
 	"net/http"
 
-	"github.com/sirna70/api-quest-test/internal/routes"
+	"github.com/sirna70/api-quest-test/routes"
 
 	"github.com/gin-gonic/gin"
 )

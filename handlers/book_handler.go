@@ -6,8 +6,8 @@ import (
 	"strings"
 
 	"github.com/gin-gonic/gin"
-	"github.com/sirna70/api-quest-test/internal/models"
-	"github.com/sirna70/api-quest-test/internal/storage"
+	"github.com/sirna70/api-quest-test/models"
+	"github.com/sirna70/api-quest-test/storage"
 )
 
 func CreateBook(c *gin.Context) {

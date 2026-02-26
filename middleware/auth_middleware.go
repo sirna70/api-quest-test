@@ -6,7 +6,7 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/golang-jwt/jwt/v5"
-	"github.com/sirna70/api-quest-test/internal/handlers"
+	"github.com/sirna70/api-quest-test/handlers"
 )
 
 func AuthMiddleware() gin.HandlerFunc {
