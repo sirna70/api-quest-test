@@ -1,19 +1,21 @@
-package main
+package api
 
 import (
 	"net/http"
 
-	"github.com/sirna70/api-quest-test/routes"
-
 	"github.com/gin-gonic/gin"
+	"github.com/sirna70/api-quest-test/routes"
 )
 
-func main() {
+var app *gin.Engine
+
+func init() {
 	gin.SetMode(gin.ReleaseMode)
-	r := gin.New()
-	r.Use(gin.Recovery())
+	app = gin.New()
+	app.Use(gin.Recovery())
+	routes.SetupRoutes(app)
+}
 
-	routes.SetupRoutes(r)
-
-	http.ListenAndServe(":8080", r)
+func Handler(w http.ResponseWriter, r *http.Request) {
+	app.ServeHTTP(w, r)
 }
