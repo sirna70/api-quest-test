@@ -28,10 +28,11 @@ func GetBooks(c *gin.Context) {
 	pageStr := c.Query("page")
 	limitStr := c.Query("limit")
 
-	filtered := storage.Books
+	filtered := make([]models.Book, 0)
+	filtered = append(filtered, storage.Books...)
 
 	if author != "" {
-		temp := []models.Book{}
+		temp := make([]models.Book, 0)
 		for _, b := range storage.Books {
 			if strings.EqualFold(b.Author, author) {
 				temp = append(temp, b)
@@ -55,6 +56,10 @@ func GetBooks(c *gin.Context) {
 			}
 			filtered = filtered[start:end]
 		}
+	}
+
+	if filtered == nil {
+		filtered = []models.Book{}
 	}
 
 	c.JSON(http.StatusOK, filtered)
