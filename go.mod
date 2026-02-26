@@ -1,6 +1,8 @@
 module github.com/sirna70/api-quest-test
 
-go 1.23.5
+go 1.23.0
+
+toolchain go1.23.5
 
 require (
 	github.com/gin-gonic/gin v1.11.0
